@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive component library demonstrating accessible forms, a CSS-only modal, alerts, and dark mode.">
+  <title>Component Library | My Blog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>My Blog</h1>
+      <nav aria-label="Main navigation">
+        <a href="#layout">Layout</a>
+        <a href="#forms">Forms</a>
+        <a href="#modal">Modal</a>
+        <a href="#alerts">Alerts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" id="layout">
+      <p class="eyebrow">Assignment Lab 2</p>
+      <h2>Responsive Component Library</h2>
+      <p>A small, accessible UI component page with responsive columns, form controls, a CSS-only modal, feedback alerts, and system-based dark mode.</p>
+    </section>
+
+    <section class="component-grid" aria-label="Component examples">
+      <article class="panel">
+        <h2>Responsive cards</h2>
+        <p>Resize the browser to see the layout change from one column on small screens, to two on tablets, and three on desktop screens.</p>
+        <div class="demo-cards">
+          <div class="mini-card"><h3>Card One</h3><p>Clear content and spacing.</p></div>
+          <div class="mini-card"><h3>Card Two</h3><p>Flexible responsive layout.</p></div>
+          <div class="mini-card"><h3>Card Three</h3><p>Consistent component styling.</p></div>
+        </div>
+      </article>
+
+      <article class="panel" id="forms">
+        <h2>Form elements</h2>
+        <form action="#" method="get">
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="full-name" type="text" autocomplete="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="">Choose a topic</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="accessibility">Accessibility</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+          </div>
+          <button class="button" type="submit">Submit form</button>
+        </form>
+      </article>
+
+      <article class="panel" id="modal">
+        <h2>CSS-only modal window</h2>
+        <p>This modal opens and closes without JavaScript, using a checkbox and CSS selectors.</p>
+        <input class="modal-toggle" type="checkbox" id="modal-toggle">
+        <label class="button" for="modal-toggle">Open modal</label>
+        <div class="modal-overlay" role="presentation">
+          <section class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <h3 id="modal-title">Example modal</h3>
+            <p>This window is styled with CSS only. Select Close to hide it.</p>
+            <label class="button button-secondary" for="modal-toggle">Close</label>
+          </section>
+        </div>
+        <p class="helper-text">Note: a production modal should also manage keyboard focus and Escape-key behavior.</p>
+      </article>
+
+      <article class="panel" id="alerts">
+        <h2>Alert / notification</h2>
+        <div class="alert alert-success" role="status">
+          <strong>Success:</strong> Your changes have been saved.
+        </div>
+        <div class="alert alert-info" role="status">
+          <strong>Info:</strong> Review the form before submitting.
+        </div>
+        <div class="alert alert-warning" role="alert">
+          <strong>Notice:</strong> Required fields must be completed.
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 My Blog — Assignment Lab 2</p>
+    </div>
+  </footer>
+</body>
+</html>
